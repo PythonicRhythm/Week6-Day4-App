@@ -1,6 +1,5 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { StorageService } from '../storage-service';
-import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-task',

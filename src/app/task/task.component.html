@@ -14,7 +14,10 @@
         </div>
         <div class="action-container">
             <button class="delete-btn" (click)="deleteTask(task)">Delete</button>
-            <button class="complete-btn" (click)="markTask(task)">Mark</button>
+            <button *ngIf = "getTask(task).completed == false" 
+            class="complete-btn" (click)="markTask(task)">Mark</button>
+            <button *ngIf = "getTask(task).completed == true" 
+            class="complete-btn" (click)="markTask(task)">Unmark</button>
         </div>
     </div>
 </div>
