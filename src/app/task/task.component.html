@@ -1,4 +1,18 @@
-<div>
-    <h2>Task: {{taskid}}</h2>
-    <h2>Task Object: {{task.taskTitle}}</h2>
+<div class="task-creation-container">
+    <input class="title-input" type="text" placeholder="Enter task title..." value="{{title}}" (change)="onTitleChange($event)"/>
+    <button class="task-submit" (click)="createTask()">Add Task</button>
+  </div>
+<div class="tasks-container">
+    <div *ngFor="let task of tasks" class="task">
+        <div class="title-container">
+            <h1 *ngIf = "getTask(task).completed == false" >
+                {{getTask(task).taskTitle}}</h1>
+            <h1 *ngIf = "getTask(task).completed == true" style="text-decoration: line-through;">
+                {{getTask(task).taskTitle}}</h1>
+        </div>
+        <div class="action-container">
+            <button class="delete-btn" (click)="deleteTask(task)">Delete</button>
+            <button class="complete-btn" (click)="markTask(task)">Mark</button>
+        </div>
+    </div>
 </div>

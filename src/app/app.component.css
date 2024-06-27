@@ -1,0 +1,32 @@
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: #5f43b2;
+    color: #fefdfd;
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.page-header {
+    font-size: 45px;
+    margin-bottom: 0px;
+}
+
+.page-header > h1 {
+    margin: 26px;
+}
+
+.task-comp {
+    width: 80%;
+    height: 75%;
+}

@@ -22,4 +22,12 @@ export class StorageService {
   public clearData() {
     localStorage.clear();
   }
+
+  public getLength() {
+    return localStorage.length;
+  }
+
+  public getSpecificKey(index:number) {
+    return localStorage.key(index);
+  }
 }

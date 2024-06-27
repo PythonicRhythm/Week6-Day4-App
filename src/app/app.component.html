@@ -1,21 +1,8 @@
 <div class="main-page">
   <div class="page-header">
-    <h2>Hello</h2>
+    <h1>Tasky</h1>
   </div>
+  <app-task class="task-comp"></app-task>
   <div>
-    <button (click)="createTask()">Add Task</button>
-  </div>
-  <div *ngFor="let task of tasks" class="tasks-container">
-    <app-task  [taskid]="task"/>
   </div>
 </div>
-
-  <!-- <button (click)="saveData()">Save Data</button>
-  <button (click)="load()">Show Data</button>
-
-  <button (click)="dataclear()">Data Clear</button>
-
-  <div>
-    <h3>Id: {{session.id}}</h3>
-    <h3>Session name: {{session.product}}</h3>
-  </div> -->
