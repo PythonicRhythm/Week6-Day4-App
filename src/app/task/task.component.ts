@@ -6,11 +6,18 @@ import { StorageService } from '../storage-service';
   templateUrl: './task.component.html',
   styleUrl: './task.component.css'
 })
-export class TaskComponent {
+export class TaskComponent implements OnInit{
   title = '';
   tasks:Array<string> = [];
 
   constructor(private storage: StorageService) {
+  }
+
+  ngOnInit() {
+    let initData = this.storage.getAllKeys();
+    if(initData != null) {
+      this.tasks = initData;
+    }
   }
 
   getTask(id:string) {
@@ -45,4 +52,10 @@ export class TaskComponent {
     this.storage.removeData(id);
     this.tasks = this.tasks.filter(task => task != id);
   }
+
+  clearData() {
+    this.tasks = [];
+    this.storage.clearData();
+  }
+
 }

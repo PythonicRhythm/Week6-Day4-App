@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { debug } from 'util';
 
 @Injectable({
   providedIn: 'root'
@@ -29,5 +30,16 @@ export class StorageService {
 
   public getSpecificKey(index:number) {
     return localStorage.key(index);
+  }
+
+  public getAllKeys() {
+    let allKeys:Array<string> = [];
+    for(var i = 0; i < localStorage.length; i++) {
+      let key = localStorage.key(i);
+      if(key != null && key != "debug") {
+        allKeys.push(key);
+      }
+    }
+    return allKeys;
   }
 }

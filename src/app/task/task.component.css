@@ -56,6 +56,29 @@ body {
     background-color: #302846;
 }
 
+.clear {
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: ease 0.25s;
+    background-color: #40365e;
+    color: #fefdfd;
+}
+
+.clear:hover {
+    -webkit-transform: scale(1.05);
+    background-color: #382f52;
+    cursor: pointer;
+}
+
+.clear:active {
+    -webkit-transform: scale(1.08);
+    background-color: #302846;
+}
+
 .tasks-container {
     display: flex;
     flex-direction: column;
