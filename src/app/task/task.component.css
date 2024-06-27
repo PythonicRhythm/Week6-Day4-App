@@ -99,6 +99,17 @@ body {
     overflow: hidden;
 }
 
+.marked-title-container {
+    width: 60%;
+    max-width: 60%;
+    overflow: hidden;
+}
+
+.marked-title-container > h1 {
+    color: #b2b2b2;
+    text-decoration: line-through;
+}
+
 .action-container {
     display: flex;
     flex-direction: row;

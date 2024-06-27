@@ -31,7 +31,7 @@ export class TaskComponent {
     if(stringData != null){
       let data = JSON.parse(stringData);
       console.log(data.completed);
-      data.completed = true;
+      data.completed = !data.completed;
       this.deleteTask(id);
       this.storage.saveData(data.id.toString(), JSON.stringify(data));
       this.tasks.push(data.id.toString());

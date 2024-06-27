@@ -4,10 +4,12 @@
   </div>
 <div class="tasks-container">
     <div *ngFor="let task of tasks" class="task">
-        <div class="title-container">
-            <h1 *ngIf = "getTask(task).completed == false" >
+        <div *ngIf = "getTask(task).completed == false" class="title-container">
+            <h1>
                 {{getTask(task).taskTitle}}</h1>
-            <h1 *ngIf = "getTask(task).completed == true" style="text-decoration: line-through;">
+        </div>
+        <div *ngIf = "getTask(task).completed == true" class="marked-title-container">
+            <h1>
                 {{getTask(task).taskTitle}}</h1>
         </div>
         <div class="action-container">
